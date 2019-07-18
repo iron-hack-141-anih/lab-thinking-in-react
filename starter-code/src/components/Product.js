@@ -36,10 +36,11 @@ export default class Products extends Component {
 
   render() {
     const productStock = this.state.products
+      // Makes sense this is why the last search bar didnt work buddy, case sensitivity is important.
       .filter(product =>
         product.name.toLowerCase().includes(this.state.search.toLowerCase())
       )
-      // Definelty need to use map function more, and get a deeper understanding of syntax here.
+      // Copying a map function to validate search. Definelty need to use map function more, and get a deeper understanding of syntax here.
       .map((product, index) => {
         return (
           <tr key={index}>
