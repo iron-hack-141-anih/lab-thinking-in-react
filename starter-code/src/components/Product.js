@@ -13,9 +13,12 @@ export default class Products extends Component {
     };
   }
 
+  // Since I am defining a state for search to filter the product list, this function will change the state which I will prop into the list.
   onSearch = search => {
     this.setState({ search });
   };
+
+  // Our state will live in the product table
 
   onCheck = event => {
     const productStock = this.state.products.filter(
@@ -33,6 +36,19 @@ export default class Products extends Component {
       });
     }
   };
+
+  // Using a better code than the if statement I could come up with, map is a better way to go around this issue.
+
+  // if (inStockOnly && !product.stocked) {
+  //     return;
+  //   }
+  //   if (product.category !== lastCategory) {
+  //     rows.push(
+  //       <ProductCategoryRow
+  //         category={product.category}
+  //         key={product.category} />
+  //     );
+  //   }
 
   render() {
     const productStock = this.state.products

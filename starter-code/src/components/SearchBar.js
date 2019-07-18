@@ -1,5 +1,7 @@
 import React from "react";
 
+// Passing the search bar, which react refers to as Inverse Data Flow
+
 export default ({ onSearch, onCheck }) => (
   <div className="container">
     <label>Search</label>
@@ -20,7 +22,7 @@ export default ({ onSearch, onCheck }) => (
         onChange={event => onCheck(event.target.checked)}
       />
       <label className="custom-control-label" htmlFor="customCheck1">
-        Only show products on stock
+        On Stock
       </label>
     </div>
   </div>
