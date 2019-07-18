@@ -1,6 +1,7 @@
 import React from "react";
 
 // Passing the search bar, which react refers to as Inverse Data Flow
+// Its a function component and we are returning a div so we dont need rce.
 
 export default ({ onSearch, onCheck }) => (
   <div className="container">
